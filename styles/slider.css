@@ -1,0 +1,63 @@
+/* Фиксированный контейнер слайдера */
+.hero-slider {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    max-width: 100%;
+    aspect-ratio: 16 / 9;
+    background: transparent;
+}
+
+.hero-slides {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+/* Все слайды одинакового размера */
+.hero-slide {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    background: transparent;
+}
+
+/* Активный слайд */
+.hero-slide.active {
+    position: relative;
+}
+
+/* Точки пагинации */
+.slider-pagination {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 7px;
+    margin-top: 20px;
+}
+
+.slider-dot {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: #434343;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.slider-dot.active {
+    background-color: #0207FF;
+}
+
+.slider-dot:hover {
+    opacity: 0.8;
+}
+
+@media (max-width: 700px){
+    .slider-pagination{
+        display: none;
+    }
+}

@@ -1,0 +1,66 @@
+/* about-slider.css - адаптивный слайдер для блока about__images */
+
+.about__images {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    user-select: none;
+    -webkit-tap-highlight-color: transparent;
+}
+
+.slider-viewport {
+    overflow: hidden;
+    width: 100%;
+    cursor: grab;
+    touch-action: pan-y pinch-zoom;
+}
+
+.slider-viewport:active {
+    cursor: grabbing;
+}
+
+.slider-track {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    will-change: transform;
+    transition: transform 0.4s cubic-bezier(0.2, 0.9, 0.4, 1.1);
+    gap: 20px;
+}
+
+.slider-slide {
+    flex-shrink: 0;
+    position: relative;
+}
+
+/* Одинаковый размер через aspect-ratio */
+.slider-slide {
+    aspect-ratio: 400 / 288; /* Соотношение 400:288 = 1.388 */
+}
+
+.slider-slide img {
+    width: 100%;
+    height: 100%;
+    display: block;
+    object-fit: cover;
+    border-radius: 30px;
+}
+
+/* Десктоп: 4 картинки */
+.slider-slide {
+    width: calc(25% - 15px); /* 4 колонки с учетом gap 20px: (20 * 3)/4 = 15 */
+}
+
+/* Планшет: 2 картинки */
+@media (min-width: 769px) and (max-width: 1024px) {
+    .slider-slide {
+        width: calc(50% - 10px); /* 2 колонки: 20/2 = 10 */
+    }
+}
+
+/* Телефон: 1 картинка */
+@media (max-width: 768px) {
+    .slider-slide {
+        width: calc(100% - 0px);
+    }
+}
