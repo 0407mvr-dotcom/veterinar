@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Ветеринар - Услуги</title>
+    <title>Ветеринар - Главный врач</title>
     <link rel="stylesheet" href="styles/reset.css" />
     <link rel="stylesheet" href="styles/style.css" />
     <link rel="stylesheet" href="styles/slider.css" />
@@ -81,6 +81,7 @@
       <a class="header__link" href="index.html#onas">О нас</a>
       <a class="header__link" href="index.html#otzivi">Отзывы</a>
       <a class="header__link" href="index.html#kontakti">Контакты</a>
+      <a href="services.html" class="header__link">Цены</a>
       <a class="header__link" href="tel:8 (910) 333-77-82">8 (910) 333-77-82</a>
     </div>
     <section class="section-3">
@@ -203,17 +204,10 @@
     }
 
     @media (max-width: 1445px) {
-      .about__link--mobile {
-        display: block;
-        margin-bottom: 25px;
-      }
-
-      .about__link {
-        display: none;
-      }
-
+      
+    
       .raiting {
-        display: flex;
+       // display: flex;
         flex-direction: column;
         align-items: center;
       }
@@ -223,6 +217,24 @@
       }
     }
 
+    @media(max-width: 1355px){
+      .revews__text {
+        max-width: 400px;
+        font-size: 20px;
+      }
+    }
+
+  @media(max-width: 1200px){
+    .about__link--mobile {
+        display: block;
+        margin-bottom: 25px;
+      }
+
+      .about__link {
+        display: none;
+      }
+  }
+    
     @media (max-width: 400px) {
       .revews__text {
         font-size: 16px;
