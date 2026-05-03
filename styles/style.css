@@ -380,6 +380,8 @@ body {
   font-family: Inter;
   font-weight: 400;
   font-size: 13px;
+
+  overflow: hidden;
 }
 
 .about__link--mobile {
@@ -395,6 +397,8 @@ body {
   font-family: Inter;
   font-weight: 400;
   font-size: 13px;
+
+  overflow: hidden;
 }
 
 .about__link:hover {
