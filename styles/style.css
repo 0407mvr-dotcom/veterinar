@@ -277,6 +277,7 @@ body {
   transition: all 0.3s ease-in-out;
   overflow: hidden;
   max-width: 395px;
+  
   display: flex;
   flex-direction: column;
   justify-content: space-between;
